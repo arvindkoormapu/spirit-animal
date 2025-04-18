@@ -23,50 +23,51 @@ export default function FinalReveal({ animal, userName }) {
       />
 
       <div className="flex flex-col items-center justify-center min-h-screen px-6">
-        <div className="bg-white/90 flex flex-col items-center justify-center px-10 py-12 mx-auto w-[90%] max-w-[1200px] rounded-[20px]">
+        <div className="bg-white/100 flex flex-col items-center justify-start px-10 py-12 mx-auto w-[90%] max-w-[1200px] rounded-[20px] max-h-[90vh] overflow-y-auto relative">
           <div className="w-full">
-            <div className="flex flex-col md:flex-row justify-between items-start w-full mb-6">
-              <div className="flex-1 pr-4">
-                <p className="font-avenir text-[22px] font-bold text-secondary">
-                  Spirit Animal: <span className="italic font-normal">{capitalize(animal.name)}</span>{' '}
-                  <span>({animal.traits.join(', ')})</span>
-                </p>
-
-                <p className="font-avenir text-[22px] font-bold mt-4 text-secondary">
-                  Adaptation: <span className="italic font-normal">Arabic</span>
-                </p>
-
-                <p className="mt-4 font-avenir text-[22px] text-secondary">Your story:</p>
-              </div>
-              <div className="flex-shrink-0">
-                <img
-                  src={animal.image}
-                  alt={animal.name}
-                  className="w-[300px] mx-auto"
-                />
-              </div>
+            {/* Animal Image Centered */}
+            <div className="w-full flex justify-center mb-6">
+              <img
+                src={animal.image}
+                alt={animal.name}
+                className="w-[300px] mx-auto"
+              />
             </div>
 
-            <h2 className="font-flapstick italic text-[30px] text-primary mb-6 text-center">
-              Sara and the Mountain of Mirrors
-            </h2>
+            <div className="w-full px-2 md:px-4">
+              <p className="font-avenir text-[22px] font-bold text-secondary">
+                Spirit Animal: <span className="italic font-normal">{capitalize(animal.name)}</span>{' '}
+                <span>({animal.traits.join(', ')})</span>
+              </p>
 
-            <p className="font-avenir text-[22px] text-secondary mb-4 px-2 md:px-4">
-              In a warm land of golden sands and tall palm trees, Sara stood with her friend Hare at the base of Jabal al-Hikmah—the Mountain of Wisdom. "Race to the top!" Hare shouted, darting ahead impulsively. Sara followed slowly and carefully. Soon, Hare became exhausted beneath the hot sun, stopping halfway. Sara reached him, offering water kindly. "Slow steps and patience," she advised. Understanding his mistake, Hare nodded. Together, steadily, they climbed higher, encouraging each other. At the summit, Hare smiled warmly, realizing patience had helped them conquer the mountain.
-            </p>
+              <p className="font-avenir text-[22px] font-bold mt-4 text-secondary">
+                Adaptation: <span className="italic font-normal">Arabic</span>
+              </p>
 
-            <p className="font-avenir font-extrabold italic text-[22px] text-secondary px-2 md:px-4">
-              Moral: Quick feet are good—but wise minds go farther.
-            </p>
+              <p className="mt-4 font-avenir text-[22px] text-secondary">Your story:</p>
 
-            <div className="flex flex-col md:flex-row justify-center gap-6 mt-10 px-4">
-              <button className="font-avenir bg-primary hover:bg-secondary transition text-white font-bold text-[18px] px-10 py-4 rounded-full w-full md:w-[350px]">
-                Print my story
-              </button>
-              <button className="font-avenir bg-primary hover:bg-secondary transition text-white font-bold text-[18px] px-10 py-4 rounded-full w-full md:w-[350px]">
-                Receive by email
-              </button>
+              <h2 className="font-flapstick italic text-[30px] text-primary mb-6 text-center">
+                Sara and the Mountain of Mirrors
+              </h2>
+
+              <p className="font-avenir text-[22px] text-secondary mb-4">
+                In a warm land of golden sands and tall palm trees, a girl named Sara stood with her friend the Hare at the bottom of Jabal al-Hikmah—the Mountain of Wisdom. "Let’s race to the top!" shouted Hare, and off they went, laughing and running. But the mountain was steep, and the sun was hot. Soon, Hare darted ahead, playful and impulsive, jumping from rock to rock. Sara followed carefully, climbing step by step. Halfway up, Hare grew tired and stopped, panting heavily beneath the scorching sun. Sara caught up, gently offered Hare water, and said softly, "We must pace ourselves and respect the mountain’s path." Hare nodded, realizing his haste had cost him dearly. Together, they continued upward steadily, sharing strength and laughter. At the summit, the view filled them with wonder. Hare smiled at Sara, whispering wisely, "Slow and steady does indeed win the race."
+              </p>
+
+              <p className="font-avenir font-extrabold italic text-[22px] text-secondary">
+                Moral: Quick feet are good—but wise minds go farther.
+              </p>
             </div>
+          </div>
+
+          {/* Sticky Buttons */}
+          <div className="sticky bottom-[-50px] left-0 right-0 bg-white/100 w-full mt-10 pt-6 pb-4 px-4 flex flex-col md:flex-row justify-center gap-6">
+            <button className="font-avenir bg-primary hover:bg-secondary transition text-white font-bold text-[18px] px-10 py-4 rounded-full w-full md:w-[350px]">
+              Print my story
+            </button>
+            <button className="font-avenir bg-primary hover:bg-secondary transition text-white font-bold text-[18px] px-10 py-4 rounded-full w-full md:w-[350px]">
+              Receive by email
+            </button>
           </div>
         </div>
       </div>

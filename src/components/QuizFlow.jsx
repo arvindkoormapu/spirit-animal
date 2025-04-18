@@ -119,7 +119,7 @@ export default function QuizFlow({ userName }) {
           alt="logo top right"
           className="absolute top-[0px] right-[20px] w-[300px] z-10"
         />
-        <div className="text-[32px] font-avenir text-secondary animate-pulse max-w-xl">
+        <div className="text-[40px] font-avenir text-secondary animate-pulse max-w-xl">
           Let’s reveal your spirit animal and go on an AI-generated adventure made just for you!
         </div>
       </div>
@@ -148,7 +148,7 @@ export default function QuizFlow({ userName }) {
           alt="logo top right"
           className="absolute top-[0px] right-[20px] w-[300px] z-10"
         />
-        <div className="text-[32px] font-avenir text-secondary animate-pulse max-w-xl">
+        <div className="text-[40px] font-avenir text-secondary animate-pulse max-w-xl">
           {currentQuestion.text}
         </div>
       </div>
@@ -172,7 +172,7 @@ export default function QuizFlow({ userName }) {
       />
 
       <div className="flex flex-col items-center justify-center min-h-screen px-6">
-        <div className="bg-white/90 flex flex-col items-center justify-center h-[80vh] min-h-80 px-6 mx-auto w-[90%] max-w-[1200px] rounded-[20px] py-12">
+        <div className="bg-white/100 flex flex-col items-center justify-center h-[80vh] min-h-80 px-6 mx-auto w-[90%] max-w-[1200px] rounded-[20px] py-12">
           <h2 className="font-flapstick text-secondary text-[32px] md:text-4xl text-center mb-10">
             {currentQuestion.text}
           </h2>
